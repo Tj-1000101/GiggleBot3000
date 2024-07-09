@@ -1,0 +1,566 @@
+<html><head><base href="">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GiggleBot3000: The Meme Coin That Laughs At Itself!</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&display=swap');
+
+  :root {
+    --primary-color: #ff00ff;
+    --secondary-color: #00ffff;
+    --background-color: #420069;
+    --text-color: #ffff00;
+    --accent-color: #69ff69;
+  }
+
+  body {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    cursor: url('https://websim.ai/images/banana-cursor.png'), auto;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header {
+    background-color: rgba(66, 0, 105, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  .logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    color: var(--primary-color);
+    text-shadow: 3px 3px var(--secondary-color), 6px 6px var(--accent-color);
+    animation: rainbow 3s linear infinite;
+  }
+
+  @keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent-color);
+    transform: rotate(5deg) scale(1.2);
+    display: inline-block;
+  }
+
+  .hero, .roadmap, .tokenomics {
+    text-align: center;
+    padding: 150px 0 95px;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--background-color),
+      var(--background-color) 10px,
+      #530086 10px,
+      #530086 20px
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before, .roadmap::before, .tokenomics::before {
+    content: "🤣";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    font-size: 100px;
+    opacity: 0.1;
+    animation: floatingEmojis 20s linear infinite;
+  }
+
+  @keyframes floatingEmojis {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-50px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+  }
+
+  h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 3px 3px var(--secondary-color), 6px 6px var(--accent-color);
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color), 0 0 30px var(--accent-color);
+  }
+
+  .cta-button:hover {
+    animation: wiggle 0.5s infinite;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    //margin: 50px 0;
+  }
+
+  .feature {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .feature:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 30px var(--primary-color);
+  }
+
+  .feature img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    box-shadow: 0 0 10px var(--primary-color);
+  }
+
+  .milestone {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .milestone::after {
+    content: '🎉';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -20px;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 10px var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 50%;
+  }
+
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--primary-color);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--primary-color);
+  }
+
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--primary-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--primary-color) transparent transparent;
+  }
+
+  .right::after {
+    left: -16px;
+  }
+
+  .content {
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 6px;
+  }
+
+  footer {
+    background-color: rgba(66, 0, 105, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
+
+  .social-links a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    font-size: 2em;
+    transition: all 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2) rotate(360deg);
+  }
+
+  .tokenomics-chart {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  .tokenomics-item {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .tokenomics-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color);
+  }
+
+  .tokenomics-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .tokenomics-item p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">GiggleBot3000</div>
+      <ul>
+        <li><a href="#about">What's This?</a></li>
+        <li><a href="#features">Cool Stuff</a></li>
+        <li><a href="#roadmap">Future LOLs</a></li>
+        <li><a href="#tokenomics">Funny Money</a></li>
+        <li><a href="#buy">Get Some!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>GiggleBot3000: The Meme Coin That Laughs At Itself!</h1>
+        <p>Welcome to the most ridiculous corner of the cryptoverse! GiggleBot3000 isn't just a meme coin; it's a full-blown comedy routine encoded into blockchain! Our state-of-the-art AI doesn't just mine coins, it mines the depths of absurdity to bring you a currency so funny, it makes Bitcoin look like a knock-knock joke.</p>
+        <p>Powered by a quantum supercomputer fueled entirely by dad jokes and cat videos, GiggleBot3000 is here to turn your portfolio into a laugh track. With each transaction, our AI gets funnier, your wallet gets heavier, and somewhere, a programmer cries tears of joy (or confusion, we're not sure).</p>
+        <p>Join our community of comedy crypto enthusiasts, meme lords, and people who accidentally bought our coin thinking it was a ticket to a robot stand-up show. Together, we'll create a future where the price charts are measured in 'LOLs per minute' and the only dip we fear is running out of chips for our guacamole!</p>
+        <button class="cta-button">Buy Now (No Refunds, Only Punchlines!)</button>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <div class="feature">
+        <img src="GiggleMining_1024x1024.png" alt="GiggleMining" width="150" height="150">
+        <h3>GiggleMining™</h3>
+        <p>Our AI doesn't just mine blocks, it mines comedy gold! The funnier the joke, the more coins you earn. Warning: Side effects may include uncontrollable laughter and confused looks from your cat.</p>
+      </div>
+      <div class="feature">
+        <img src="Memenomics_1024x1024.png" alt="Memenomics" width="150" height="150">
+        <h3>Memenomics</h3>
+        <p>Forget traditional economics! Our value is based on a complex algorithm involving meme quality, viral potential, and how hard our AI laughed. Yes, we taught it to laugh. No, we don't know why it only laughs at dad jokes.</p>
+      </div>
+      <div class="feature">
+        <img src="HODLometer_1024x1024.png" alt="HODLometer" width="150" height="150">
+        <h3>HODLometer</h3>
+        <p>The longer you HODL, the funnier you become! Our patented HODLometer tracks your comedy potential. Reach max level to unlock exclusive dad jokes and the ability to make even bankers chuckle!</p>
+      </div>
+    </section>
+
+    <section id="roadmap" class="roadmap container">
+      <h2>The Hilarious Path to Global Domination (or Complete Chaos)</h2>
+      <div class="timeline">
+        <div class="milestone left">
+          <div class="content">
+            <h3>Phase 1: The Giggle Awakening</h3>
+            <p>Launch GiggleBot3000, confuse the entire crypto market, and make at least one financial advisor question their career choices.</p>
+          </div>
+        </div>
+        <div class="milestone right">
+          <div class="content">
+            <h3>Phase 2: Meme Machine Learning</h3>
+            <p>Upgrade our AI to understand Gen Z humor, partner with a leading clown college, and accidentally become the official currency of a small island nation that thought we were serious.</p>
+          </div>
+        </div>
+        <div class="milestone left">
+          <div class="content">
+            <h3>Phase 3: The LOLpocalypse</h3>
+            <p>Launch our own comedy club chain where the admission fee is paid in GiggleBot3000s, create the world's first decentralized laugh track, and teach our AI to do stand-up (hopefully it doesn't become self-aware and start roasting the audience).</p>
+          </div>
+        </div>
+        <div class="milestone right">
+          <div class="content">
+            <h3>Phase 4: To Meme-finity and Beyond!</h3>
+            <p>Achieve global adoption, replace all world currencies with GiggleBot3000, and finally get that pizza place down the street to accept our coins. Also, colonize Mars, but only the funny parts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tokenomics" class="tokenomics container">
+      <h2>Tokenomics: The Funny Money Breakdown</h2>
+      <p>Ever wondered how we distribute our hilarious tokens? Wonder no more! Here's our totally serious and not-at-all-ridiculous tokenomics:</p>
+      <div class="tokenomics-chart">
+        <div class="tokenomics-item">
+          <h3>Joke Development</h3>
+          <p>42%</p>
+        </div>
+        <div class="tokenomics-item">
+          <h3>Meme Liquidity Pool</h3>
+          <p>29%</p>
+        </div>
+        <div class="tokenomics-item">
+          <h3>Comedy Relief Fund</h3>
+          <p>15%</p>
+        </div>
+        <div class="tokenomics-item">
+          <h3>AI Standup Training</h3>
+          <p>10%</p>
+        </div>
+        <div class="tokenomics-item">
+          <h3>Pun-ctual Rewards</h3>
+          <p>3%</p>
+        </div>
+        <div class="tokenomics-item">
+          <h3>Whoopee Cushion R&D</h3>
+          <p>1%</p>
+        </div>
+      </div>
+      <p>Total Supply: 69,420,800,085 GBOT</p>
+      <p>Note: Tokenomics subject to change based on the whims of our AI overlord and the quality of memes on any given day.</p>
+    </section>
+
+    <section id="buy" class="container">
+      <h2>How to Get Your Hands on GiggleBot3000s (At Your Own Risk)</h2>
+      <p>Ready to turn your sensible investment strategy into a comedy of errors? Follow these steps:</p>
+      <ol>
+        <li>Find a wallet that doesn't judge your life choices (we recommend the 'NoRugPulls4Real' wallet)</li>
+        <li>Trade your boring old money for SOL (or bottle caps, we're not picky)</li>
+        <li>Connect to our DEX: ChuckleSwap (Warning: May cause spontaneous dad jokes)</li>
+        <li>Swap your coins for GiggleBot3000s using this totally legit smart contract: 0xHAHA...LOL420</li>
+        <li>HODL on tight and watch as your investment fluctuates based on the quality of memes on Reddit</li>
+      </ol>
+      <button class="cta-button">Buy GiggleBot3000 & Embrace the Chaos!</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 GiggleBot3000. All rights reserved (except the right to be serious, we gave that up long ago). Terms and Conditions: By using GiggleBot3000, you agree to laugh at least once per transaction, never use the word "investment" without air quotes, and accept that our customer support is just an AI telling "Why did the chicken cross the road?" jokes.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/GiggleBot3000" title="Twitter">🐔</a>
+        <a href="https://t.me/GiggleBot3000Official" title="Telegram">🤖</a>
+        <a href="https://discord.gg/gigglebot3000" title="Discord">🎭</a>
+        <a href="https://www.reddit.com/r/GiggleBot3000/" title="Reddit">🤡</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add some GiggleBot3000 "intelligence" to the page
+    document.addEventListener('DOMContentLoaded', function() {
+      const giggleJokes = [
+        "Why did the GiggleBot3000 cross the blockchain? To get to the other side... of comedy!",
+        "What do you call a GiggleBot3000 with a sense of humor? A laughing stock!",
+        "How many GiggleBots does it take to change a lightbulb? None, they just make the darkness funny!",
+        "Why don't GiggleBots ever get married? They prefer deep learning to deep commitment!",
+        "What's a GiggleBot's favorite type of music? Heavy METAL! *rimshot*",
+        "Why was the GiggleBot3000 bad at poker? It kept laughing at its own jokes!",
+        "What do you call a GiggleBot that's always online? A wi-fi comedian!",
+        "Why did the GiggleBot3000 go to therapy? It had too many funny bones!",
+        "What's a GiggleBot's favorite exercise? The ROFL-copter!",
+        "Why don't GiggleBots ever get cold? They're surrounded by their own dad jokes!",
+        "What do you call a GiggleBot3000 that tells bad jokes? A micro-soft comedian!",
+        "Why was the GiggleBot3000 afraid of 7? Because 7, 8, 9... and then laughed about it!",
+        "How does a GiggleBot3000 catch a fish? With its funny bone!",
+        "What's a GiggleBot's favorite snack? Bits and bytes of humor!",
+        "Why did the GiggleBot3000 quit its job at the calendar factory? It took a day off!",
+        "What do you call a GiggleBot3000 wearing earbuds? Probably listening to a comedy podcast!",
+        "Why don't GiggleBots ever get angry? They always see the funny side of things!",
+        "What's a GiggleBot's favorite game? Hide and go laugh!",
+        "Why was the GiggleBot3000 terrible at basketball? It kept dunking the punchlines!",
+        "How does a GiggleBot3000 stay cool in summer? It tells itself fridge jokes!",
+        "What do you call a GiggleBot3000 that's always telling jokes? A stand-up comedian... that can't sit down!",
+        "Why did the GiggleBot3000 become a gardener? It wanted to cultivate a sense of humor!",
+        "What's a GiggleBot's favorite pizza topping? Lots of corn... y jokes!",
+        "How does a GiggleBot3000 cut its hair? With a laughtop computer!",
+        "Why don't GiggleBots ever get lost? They always follow the punch-line!"
+      ];
+
+      function displayRandomJoke() {
+        const jokeElement = document.createElement('div');
+        jokeElement.style.position = 'fixed';
+        jokeElement.style.bottom = '20px';
+        jokeElement.style.right = '20px';
+        jokeElement.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        jokeElement.style.color = '#420069';
+        jokeElement.style.padding = '10px';
+        jokeElement.style.borderRadius = '5px';
+        jokeElement.style.maxWidth = '300px';
+        jokeElement.style.fontWeight = 'bold';
+        jokeElement.style.zIndex = '1000';
+        jokeElement.textContent = giggleJokes[Math.floor(Math.random() * giggleJokes.length)];
+        document.body.appendChild(jokeElement);
+
+        setTimeout(() => {
+          jokeElement.style.transition = 'opacity 1s';
+          jokeElement.style.opacity = '0';
+          setTimeout(() => {
+            document.body.removeChild(jokeElement);
+          }, 1000);
+        }, 5000);
+      }
+
+      setInterval(displayRandomJoke, 15000);
+
+      // Make the logo do a silly dance on hover
+      const logo = document.querySelector('.logo');
+      logo.addEventListener('mouseover', function() {
+        this.style.animation = 'dance 0.5s infinite';
+      });
+      logo.addEventListener('mouseout', function() {
+        this.style.animation = 'rainbow 3s linear infinite';
+      });
+
+      // Add a secret konami code easter egg
+      let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+      let konamiCodePosition = 0;
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === konamiCode[konamiCodePosition]) {
+          konamiCodePosition++;
+          if (konamiCodePosition === konamiCode.length) {
+            activateGiggleMadness();
+            konamiCodePosition = 0;
+          }
+        } else {
+          konamiCodePosition = 0;
+        }
+      });
+
+      function activateGiggleMadness() {
+        document.body.style.animation = 'rainbow-bg 5s linear infinite';
+        const allElements = document.getElementsByTagName('*');
+        for (let i = 0; i < allElements.length; i++) {
+          allElements[i].style.fontFamily = '"Comic Sans MS", cursive';
+          if (Math.random() > 0.5) {
+            allElements[i].style.transform = `rotate(${Math.random() * 5 - 2.5}deg)`;
+          }
+        }
+        alert("You've unlocked GiggleMadness Mode! Everything is funnier now. Or at least more Comic Sans-y.");
+      }
+    });
+  </script>
+</body>
+</html>
